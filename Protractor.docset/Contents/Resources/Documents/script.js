@@ -1,21 +1,12 @@
 
 $(function () {
 	/*
-var sql = '';
-$('.protractor-api, .locators-api, .webdriver-api').children().each(function(){
-   var name = $(this).text();
-   var path = $(this).find('a').attr('href');
-   			path = path.replace(/api/g, '');
-				path = path.replace(/-/g, '');
 
-   sql += '\n';
-   sql += "INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('"+name+"', 'Method', '"+ path +"');";
-});
-console.log(sql);
 */
 
 	
 	//Take all .anchor elements and make the id the name
+	/*
 	$('.anchor').each(function(){
 		var n = $(this).attr('name');
 				n = n.replace(/user-content-/g, '');
@@ -31,6 +22,22 @@ console.log(sql);
 			$(this).attr('href', a);
 	});
 
+*/
+	var sql = '';
+
+/*
+$('.task-list li a').each(function(){
+   var name = $(this).text();
+   var path = $(this).attr('href');
+   			path = path.replace(/api/g, '');
+				path = path.replace(/-/g, '');
+
+   sql += '\n';
+   sql += "INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES ('"+name+"', 'Method', '"+ path +"');";
+});
+console.log(sql);
+*/
+
 	//Smooth scroll to element
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -40,7 +47,7 @@ console.log(sql);
         $('html,body').animate({
           scrollTop: target.offset().top
         }, 1000);
-        return false;
+        //return false;
       }
     }
   });
